@@ -1,0 +1,19 @@
+// Day 3 - Q11
+// Problem Statement: Write a program to Find GCD of two numbers.
+
+#include <stdio.h>
+
+int main() {
+    int n1, n2;
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &n1, &n2);
+
+    while (n1 != n2) {
+        if (n1 > n2)
+            n1 -= n2;
+        else
+            n2 -= n1;
+    }
+    printf("GCD = %d\n", n1);
+    return 0;
+}
