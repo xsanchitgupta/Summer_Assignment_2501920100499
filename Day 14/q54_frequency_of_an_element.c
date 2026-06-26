@@ -1,0 +1,24 @@
+// Day 14 - Q54
+// Problem Statement: Write a program to Frequency of an element.
+
+#include <stdio.h>
+
+int main() {
+    int n, key, count = 0;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter element to find frequency: ");
+    scanf("%d", &key);
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            count++;
+        }
+    }
+    printf("Frequency of %d is %d.\n", key, count);
+    return 0;
+}
